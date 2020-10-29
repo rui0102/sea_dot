@@ -10,7 +10,8 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 
 gem 'devise'
-gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'bootstrap-sass', '3.3.7'
+#gem 'bootstrap', '~> 5.0.0.alpha1'
 
 
 group :development, :test do
