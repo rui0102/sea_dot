@@ -1,0 +1,2 @@
+class CreaturesInfo < ApplicationRecord
+end
