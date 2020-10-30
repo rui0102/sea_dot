@@ -9,9 +9,20 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 
+#ログイン機能
 gem 'devise'
-gem 'bootstrap-sass', '3.3.7'
-#gem 'bootstrap', '~> 5.0.0.alpha1'
+
+#Bootstrap
+gem 'bootstrap', '~> 5.0.0.alpha1' #インストール時エラー
+#gem 'bootstrap-sass', '3.3.7'  #railsチュートリアル
+#gem 'bootstrap', '~> 4.4.1'
+gem 'devise-bootstrap-views', '~> 1.0'
+#gem 'bootstrap-sass' 
+#gem 'sass-rails'
+
+# 日本語化
+gem 'rails-i18n', '~> 5.1' #変わってない
+gem 'devise-i18n'
 
 
 group :development, :test do
