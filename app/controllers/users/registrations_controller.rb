@@ -5,45 +5,53 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+     super
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+     #super
+     @user = User.new(user_params) #↓チュートリアル
+    if @user.save
+      #@user.send_activation_email # Userモデルで定義したメソッド（send_activation_email）を呼び出して有効化メールを送信
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+    else
+      render'new'
+    end
+  end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+     super
+  end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+     super
+  end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+     super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
   # cancel oauth signing in/up in the middle of the process,
   # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
+   def cancel
+     super
+   end
 
-  # protected
+   protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+   #def configure_sign_up_params
+     #devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
+   #end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
@@ -59,4 +67,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  def user_params #チュートリアル  #7.3.2User.new(params[:user])はセキュリティ上危険。User.new(user_params)に置き換える
+   params.require(:user).permit(:name, :email, :password,
+     :password_confirmation)
+  end
+
 end

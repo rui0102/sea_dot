@@ -1,0 +1,2 @@
+module CreaturesInfosHelper
+end
