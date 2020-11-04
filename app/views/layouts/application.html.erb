@@ -2,35 +2,23 @@
 <html>
   <head>
     <title>SeaDot</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
-
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-
-    <div class="container">
-        <!--<%= link_to "sample app", '#', id: "logo" %>-->
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "ホーム",  root_path %></li>
-            <li><%= link_to "新規登録",  new_user_registration_path %></li>
-            <li><%= link_to "ログイン", new_user_session_path %></li>
-            <li><%= link_to "ログイアウト", destroy_user_session_path %></li>
-          </ul>
-        </nav>
+    <div class="wrapper">
+      <%= render 'layouts/header' %>
+      <div class="container">
+        <% flash.each do |message_type, message| %>   <!--サイト全体にflashを使えるようにしている(チュートリアル)-->
+         <%= content_tag(:div, message, class:"alert alert-#{message_type}")%>
+       <% end %>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
       </div>
-    </header>
-    
-    <div class="container">
-    <%= yield %>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     </div>
   </body>
 </html>

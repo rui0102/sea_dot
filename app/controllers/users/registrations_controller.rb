@@ -12,14 +12,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
      #super
-     @user = User.new(user_params) #↓チュートリアル
-    if @user.save
-      #@user.send_activation_email # Userモデルで定義したメソッド（send_activation_email）を呼び出して有効化メールを送信
-      flash[:info] = "Please check your email to activate your account."
-      redirect_to root_url
-    else
-      render'new'
-    end
   end
 
     # プロフィール画面用のアクションを追加
@@ -73,9 +65,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-  def user_params #チュートリアル  #7.3.2User.new(params[:user])はセキュリティ上危険。User.new(user_params)に置き換える
-   params.require(:user).permit(:name, :email, :password,
-     :password_confirmation)
-  end
+
 
 end

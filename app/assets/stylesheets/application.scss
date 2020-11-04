@@ -15,4 +15,22 @@
  */
 
  @import "bootstrap";
-// // @import "bootstrap-sprockets";  //railsチュートリアル
+
+
+ 
+
+/*フッター*/
+.mt-auto{
+    margin-top: auto!important;
+}
+
+
+
+/*top*/
+.application-top{
+  .top-container{
+    color: white;
+    background-image: url("/assets/see.jpeg");
+    background-size: cover;
+  }
+}
