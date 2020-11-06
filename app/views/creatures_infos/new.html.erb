@@ -1,1 +1,20 @@
-test
+<%= form_with model: @creatures_info do |f| %><!--仮設定-->
+  <div class="text-center mb-5 pb-5">
+    <h3 class="form-title py-5">新規投稿</h3>
+
+    <div class="field form-group text-left py-3">
+      <%= f.label :画像を選択してください %><br />
+      <%= f.file_field :picture %>
+    </div>
+    
+    <div class="field form-group text-left py-3">
+      <%= f.label :名前 %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class:"form-control" %>
+    </div>
+
+    <div class="actions py-5">
+        <%= f.submit "投稿する" ,class:"btn btn-primary btn-block rounded-pill" %>
+    </div>
+
+  </div>
+<% end %>
