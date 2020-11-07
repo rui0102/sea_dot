@@ -29,10 +29,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-   # プロフィール画面用のアクションを追加
-  def detail
-    @user = User.find_by(id: params[:id])
-  end
   
 
   # GET /resource/cancel
