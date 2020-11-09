@@ -1,7 +1,7 @@
 <!-- ログイン画面 -->
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
-  <div class="text-center mb-5 pb-5">
+  <div class="text-center mb-5 pb-5 px-3">
     <h3 class="form-title py-5">See Dotにログイン</h3>
     <div class="field form-group text-left py-3">
       <%= f.label :Eメール %><br />
