@@ -1,1 +1,70 @@
 プロフィール詳細ページ
+<div class="py-5">
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-2">
+        <svg class="bd-placeholder-img" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+      </div>
+      <div class="col-10">
+        <div class="card-body">
+          <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
+          <h3 class="card-title py-3">(投稿者の名前)</h3>
+          <h5>(24)歳 （シルバーティアラ）乗船中</h5>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item p-4">自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</li>
+    </ul>
+  </div>
+
+  <div class="text-center py-5">
+    <h2>投稿履歴</h2>
+  </div>
+  <div class="card mx-auto " style="width: 40rem;">
+    <svg class="bd-placeholder-img card-img-top" width="80%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <div class="card-body">
+      <p class="card-title">（画像）(投稿者の名前)</p>
+      <p class="card-text">(イルカを発見しました！！)</p>
+      <%= link_to "詳細確認" , creatures_info_path , class:"btn btn-outline-primary btn-block rounded-pill" %>
+    </div>
+  </div>
+  <p></p>
+  <div class="card mx-auto " style="width: 40rem;">
+    <svg class="bd-placeholder-img card-img-top" width="80%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <div class="card-body">
+      <p class="card-title">（画像）(投稿者の名前)</p>
+      <p class="card-text">(イルカを発見しました！！)</p>
+      <%= link_to "詳細確認" ,creatures_info_path , class:"btn btn-outline-primary btn-block rounded-pill" %>
+    </div>
+  </div>
+  <p></p>
+  <div class="card mx-auto " style="width: 40rem;">
+    <svg class="bd-placeholder-img card-img-top" width="80%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
+    <div class="card-body">
+      <p class="card-title">(（画像）投稿者の名前)</p>
+      <p class="card-text">(イルカを発見しました！！)</p>
+      <%= link_to "詳細確認" , creatures_info_path , class:"btn btn-outline-primary btn-block rounded-pill" %>
+    </div>
+  </div>
+
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center py-5" >
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active">
+        <span class="page-link">
+          2
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>
