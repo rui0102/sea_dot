@@ -3,13 +3,14 @@
   <div class="card">
     <svg class="bd-placeholder-img card-img-top" width="100%" height="600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
     <div class="card-body">
-      <h3 class="card-title py-2">（画像）(投稿者の名前)</h3>
+      <h3 class="card-title py-2">（画像）<%= link_to "#", class:"link_color" do %>(投稿者の名前)<% end %></h3>
       <h5 class="card-text py-2">(イルカを発見しました！！)</h5>
       <h5 class="card-text py-2">・緯度（42.4218649）</h5>
       <h5 class="card-text py-2">・経度（141・6592933）</h5>
       <h5 class="card-text py-2">・天候（晴れ） ・波高(3)m</h5>
       <h5 class="card-text py-2">・視程 (12)マイル ・気温 (19)°</h5>
       <h5 class="card-text py-2">・出発地 (八戸) ・目的地 (苫小牧)</h5>
+      <%= link_to "削除する", creatures_info_path, data: { confirm: "本当に削除しますか？" }, method: :delete,class:"btn btn-outline-danger btn-block rounded-pill mt-5" %></p>
     </div>
   </div>
 </div>

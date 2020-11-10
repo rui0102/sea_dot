@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   }
 
   resources :creatures_infos, only: [:index, :show, :new, :create, :destroy ]
-  #get 'creatures_infos/index'  #上に書き換えた。
 
 
 end
