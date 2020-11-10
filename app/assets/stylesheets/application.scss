@@ -17,16 +17,15 @@
  @import "bootstrap";
 
 body{
-  background-color: rgb(189, 255, 255);
+  background-color: rgb(78, 243, 255);
 }
+
 
 /*link*/
 .link_color{
   text-decoration: none;
   color: black;
 }
-
-
 
 
 /*top*/
@@ -38,4 +37,13 @@ body{
   }
 }
 
-/*fooms*/
+/*card*/
+.user_imgs{
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.crature_card{
+  width: 80%;
+}
