@@ -11,5 +11,4 @@ Rails.application.routes.draw do
 
   resources :creatures_infos, only: [:index, :show, :new, :create, :destroy ]
 
-
 end

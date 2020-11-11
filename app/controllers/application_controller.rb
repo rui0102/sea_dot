@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller? #deviesを使う初期設定（キータ）
   
   def after_sign_in_path_for(resource) #ログイン後のリダイレクト先
-    "/user/#{current_user.id}"
+    creatures_infos_path
   end
 
   protected

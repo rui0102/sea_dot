@@ -8,9 +8,7 @@
 
   <body>
       <%= render 'layouts/header' %>
-        <% flash.each do |message_type, message| %>   <!--サイト全体にflashを使えるようにしている(チュートリアル)-->
-         <%= content_tag(:div, message, class:"alert alert-#{message_type}")%>
-        <% end %>
+        <%= render 'layouts/notifications' %>
         <div class="mb-5">
           <%= yield %>
         </div>
