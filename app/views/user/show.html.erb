@@ -1,0 +1,72 @@
+<div class="py-5 px-3">
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-3">
+        <img class="user_imgs" src="/assets/user1.png" />
+      </div>
+      <div class="col-lg-10 col-md-9 col-sm-8 col-9">
+        <div class="card-body">
+          <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
+          <h3 class="card-title py-3">(ユーザーの名前)</h3>
+          <h5>(24)歳 （シルバーティアラ）乗船中</h5>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item p-4">自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</li>
+    </ul>
+  </div>
+
+  <div class="text-center py-5">
+    <h2>投稿履歴</h2>
+  </div>
+  
+  <div class="card crature_card mx-auto " >
+    <%= link_to creatures_info_path, class: "link_color" do %>
+      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
+      <div class="card-body">
+        <p class="card-title">（画像）(投稿者の名前)</p>
+        <p class="card-text">(イルカを発見しました！！)</p>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <div class="card crature_card mx-auto " >
+    <%= link_to creatures_info_path, class: "link_color" do %>
+      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
+      <div class="card-body">
+        <p class="card-title">（画像）(投稿者の名前)</p>
+        <p class="card-text">(イルカを発見しました！！)</p>
+      </div>
+    <% end %>
+  </div>
+  <br><div class="card crature_card mx-auto " >
+    <%= link_to creatures_info_path, class: "link_color" do %>
+      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
+      <div class="card-body">
+        <p class="card-title">（画像）(投稿者の名前)</p>
+        <p class="card-text">(イルカを発見しました！！)</p>
+      </div>
+    <% end %>
+  </div>
+
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center py-5" >
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active">
+        <span class="page-link">
+          2
+          <span class="sr-only">(current)</span>
+        </span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>
