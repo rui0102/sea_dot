@@ -8,8 +8,6 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
-gem 'carrierwave',             '1.2.2'  #13.4.1画像アップローダー
-gem 'mini_magick',             '4.7.0'  #13.4.1画像をリサイズ
 gem 'devise'  #ログイン機能
 gem 'bootstrap', '~> 5.0.0.alpha1' #Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
