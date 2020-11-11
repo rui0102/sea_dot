@@ -1,5 +1,5 @@
 <% if user_signed_in? %>  
-  <nav class="navbar  navbar-light bg-light sticky-top text-center" >
+  <nav class="navbar  navbar-light sticky-top text-center" >
     <div class="ml-5">
       <h5>See Dot</h5>
     </div>
@@ -13,19 +13,19 @@
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-light bg-light fixed-bottom">
+  <nav class="navbar navbar-light fixed-bottom">
     <%= link_to creatures_infos_path, class:"navbar-brand p-3 ml-5" do%>
-      <i class="fas fa-home"></i>
+      <i class="fas fa-home icon"></i>
     <% end %>
     <%= link_to new_creatures_info_path, class:"navbar-brand p-3" do%>
-      <i class="fas fa-plus-square"></i>
+      <i class="fas fa-plus-square icon"></i>
     <% end %>
     <%= link_to '#', class:"navbar-brand p-3 mr-5" do%>
-      <i class="fas fa-user"></i>
+      <i class="fas fa-user icon"></i>
     <% end %>
   </nav>
 <% else %>
-  <nav class="navbar navbar-light bg-light sticky-top text-center" >
+  <nav class="navbar navbar-light sticky-top text-center" >
     <div class="ml-5">
       <h5>See Dot</h5>
     </div>
