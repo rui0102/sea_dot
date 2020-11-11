@@ -12,7 +12,9 @@
         <% flash.each do |message_type, message| %>   <!--サイト全体にflashを使えるようにしている(チュートリアル)-->
          <%= content_tag(:div, message, class:"alert alert-#{message_type}")%>
         <% end %>
-        <%= yield %>
+        <div class="mb-5">
+          <%= yield %>
+        </div>
         <%= render 'layouts/footer' %>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

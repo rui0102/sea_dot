@@ -13,13 +13,7 @@ gem 'mini_magick',             '4.7.0'  #13.4.1画像をリサイズ
 gem 'devise'  #ログイン機能
 gem 'bootstrap', '~> 5.0.0.alpha1' #Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
-#gem 'bootstrap-sass', '3.3.7'  #railsチュートリアル
-#gem 'bootstrap', '~> 4.4.1'
-#gem 'bootstrap-sass' 
-#gem 'sass-rails'
-gem 'rails-i18n', '~> 5.1' #日本語化変わってない
-gem 'devise-i18n'
-
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
