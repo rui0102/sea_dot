@@ -6,14 +6,18 @@
       </div>
       <div class="col-lg-10 col-md-9 col-sm-8 col-9">
         <div class="card-body">
-          <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
-          <h3 class="card-title py-3">(ユーザーの名前)</h3>
-          <h5>(24)歳 （シルバーティアラ）乗船中</h5>
+          <% if @user == current_user %>
+            <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
+          <% end %>
+          <h3 class="card-title py-3"><%= @user.name %></h3>
+          <h5>年齢 <%= @user.age %></h5>
+          <br>
+          <h5>乗船中の船 <%= @user.ship_name %></h5>
         </div>
       </div>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item p-4">自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</li>
+      <li class="list-group-item p-4"><%= @user.self_introduction %></li>
     </ul>
   </div>
 
