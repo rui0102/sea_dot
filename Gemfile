@@ -8,22 +8,10 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
-
-#ログイン機能
-gem 'devise'
-
-#Bootstrap
-gem 'bootstrap', '~> 5.0.0.alpha1' #インストール時エラー
-#gem 'bootstrap-sass', '3.3.7'  #railsチュートリアル
-#gem 'bootstrap', '~> 4.4.1'
+gem 'devise'  #ログイン機能
+gem 'bootstrap', '~> 5.0.0.alpha1' #Bootstrap
 gem 'devise-bootstrap-views', '~> 1.0'
-#gem 'bootstrap-sass' 
-#gem 'sass-rails'
-
-# 日本語化
-gem 'rails-i18n', '~> 5.1' #変わってない
-gem 'devise-i18n'
-
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
@@ -39,6 +27,7 @@ end
 
 group :production do
  # gem 'pg', '0.20.0' 環境構築時コメントアウト
+ # gem 'fog', '1.42' 本番環境で画像をアップロード
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります

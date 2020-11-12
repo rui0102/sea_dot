@@ -1,0 +1,52 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*flash*/
+.notice {
+  color: white;
+  background-color: rgb(52, 140, 255);
+  text-align: center;
+}
+.alert {
+  color: white;
+  background-color: rgb(255, 127, 42);
+  text-align: center;
+}
+
+/*link*/
+.link_color{
+  text-decoration: none;
+  color: black;
+}
+
+/*header*/
+
+.navbar{
+  background-color:rgba(255,255,255,0.9);
+}
+
+.icon{
+  font-size: 1.3em;
+  color: rgb(64, 153, 255);
+    }
+
+/*top*/
+.application-top{
+  .top-container{
+    color: white;
+    background-image: url("/assets/see.jpeg");
+    background-size: cover;
+  }
+}
+
+/*card*/
+.user_imgs{
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.crature_card{
+  width: 80%;
+}
