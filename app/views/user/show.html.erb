@@ -1,19 +1,35 @@
 <div class="py-5 px-3">
   <div class="card">
     <div class="row no-gutters">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-3">
-        <img class="user_imgs" src="/assets/user1.png" />
+      <div class="user_imgs text-center col-lg-2 col-md-3 col-sm-4 col-3 p-2">
+        <% if @user.picture? %>
+          <%= image_tag @user.picture.url, class: "user-icon" %>
+        <% else %>
+          <%= image_tag "default_user.png", class: "default_user" %>
+        <% end %>
       </div>
       <div class="col-lg-10 col-md-9 col-sm-8 col-9">
         <div class="card-body">
-          <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
-          <h3 class="card-title py-3">(ユーザーの名前)</h3>
-          <h5>(24)歳 （シルバーティアラ）乗船中</h5>
+          <% if @user == current_user %>
+            <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
+          <% end %>
+          <h3 class="card-title py-3"><%= @user.name %></h3>
+          <% if @user.age? %>
+            <h5><%= @user.age %> 歳</h5>
+          <% end %>
+          <br>
+          <% if @user.ship_name? %>
+            <h5><%= @user.ship_name %> 乗船中</h5>
+          <% end %>
         </div>
       </div>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item p-4">自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介</li>
+      <% if @user.self_introduction? %>
+        <li class="list-group-item p-4"><%= @user.self_introduction %></li>
+      <% else %>
+        <li class="list-group-item p-4">よろしくお願いします！</li>
+      <% end %>
     </ul>
   </div>
 
