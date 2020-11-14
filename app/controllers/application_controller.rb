@@ -6,6 +6,14 @@ class ApplicationController < ActionController::Base
     creatures_infos_path
   end
 
+  # def after_sign_out_path_for(resource)
+  #   creatures_infos_path
+  # end
+
+  # def after_update_path_for(resource)
+  #   creatures_infos_path
+  # end
+
   protected
 
   def configure_permitted_parameters
