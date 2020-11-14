@@ -49,11 +49,13 @@
 /*card*/
 
 .user-icon {
-  border-radius: 100px;
+  border-radius: 50%;
+  // border-radius: 100px;
 }
 
 .default_user{
-  border-radius: 100px;
+  border-radius: 50%;
+  // border-radius: 100px;
   width: 80%;
   height: 15vw;
   object-fit: cover;
