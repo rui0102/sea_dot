@@ -14,12 +14,12 @@
 
     <div class="field form-group text-left py-3">
       <%= f.label :緯度 %><br />
-      <%= f.number_field :latitude, autofocus: true ,class:"form-control" %>
+      <%= f.text_field :latitude, autofocus: true ,class:"form-control", placeholder:"5〜9文字で入力してください" %>
     </div>
 
     <div class="field form-group text-left py-3">
       <%= f.label :経度 %><br />
-      <%= f.number_field :longitude, autofocus: true ,class:"form-control"  %>
+      <%= f.text_field :longitude, autofocus: true ,class:"form-control", placeholder:"6〜10文字で入力してください"  %>
     </div>
 
     <div class="field form-group text-left py-3">
