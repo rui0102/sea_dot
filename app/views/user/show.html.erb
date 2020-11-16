@@ -1,12 +1,14 @@
 <div class="py-5 px-3">
   <div class="card">
     <div class="row no-gutters">
-      <div class="user_imgs text-center col-lg-2 col-md-3 col-sm-4 col-3 p-2">
+      <div class="user_imgs col-lg-2 col-md-3 col-sm-4 col-3">
+        <div class="m-2">
         <% if @user.picture? %>
-          <%= image_tag @user.picture.url, class: "user-icon" %>
+          <%= image_tag @user.picture.url, class: "user-icon card-img rounded-circle my-auto" %>
         <% else %>
-          <%= image_tag "default_user.png", class: "default_user" %>
+          <%= image_tag "default_user.png", class: "default_user card-img rounded-circle" %>
         <% end %>
+        </div>
       </div>
       <div class="col-lg-10 col-md-9 col-sm-8 col-9">
         <div class="card-body">
