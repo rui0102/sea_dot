@@ -116,6 +116,9 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     popper_js (1.16.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     puma (3.9.1)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -221,6 +224,7 @@ DEPENDENCIES
   jquery-rails (= 4.3.1)
   listen (= 3.1.5)
   mini_magick
+  pry
   puma (= 3.9.1)
   rails (= 5.1.6)
   sass-rails (= 5.0.6)
