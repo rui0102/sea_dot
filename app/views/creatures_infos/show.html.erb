@@ -9,9 +9,9 @@
       <h3 class="card-title py-2">
         <%= link_to user_path(@creatures_info.user), class:"link_color" do %>
           <% if @creatures_info.user.picture? %>
-            <%= image_tag @creatures_info.user.picture.url, class: "icon" %>
+            <%= image_tag @creatures_info.user.picture.url, class: "creatures_info_user_icon" %>
           <% else %>
-            <%= image_tag "default_user.png", class: "icon" %>
+            <%= image_tag "default_user.png", class: "creatures_info_user_icon" %>
           <% end %>
           <%= @creatures_info.user.name %>
         <% end %>

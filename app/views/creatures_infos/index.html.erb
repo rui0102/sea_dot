@@ -4,25 +4,29 @@
   </div>
   
   <% @creatures_infos.each do |creatures_info| %>
-    <div class="card crature_card mx-auto " >
+    <div class="card creatures_card mx-auto " >
       <%= link_to creatures_info_path(creatures_info) do %>
         <% if creatures_info.picture? %>
           <%= image_tag creatures_info.picture.url, class: "card-img-top creature_img" %>
         <% else %>
           <img class="card-img-top creature_imgs" src="/assets/default_creatures.jpg">
         <% end %>
+      <% end %>
         <div class="card-body">
           <div class="card-title py-2">
+            <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
               <% if creatures_info.user.picture? %>
-                <%= image_tag creatures_info.user.picture.url, class: "icon" %>
+                <%= image_tag creatures_info.user.picture.url, class: "creatures_infos_user_icon" %>
               <% else %>
-                <%= image_tag "default_user.png", class: "icon" %>
+                <%= image_tag "default_user.png", class: "creatures_infos_user_icon" %>
               <% end %>
               <%= creatures_info.user.name %>
+            <% end %>
           </div>
-          <p class="card-text"><%= creatures_info.content %></p>
+          <div class="card-text">
+           <%= link_to creatures_info.content, creatures_info_path(creatures_info) , class: "link_color" %> 
+          </div>
         </div>
-      <% end %>
     </div>
     <br>
   <% end %>

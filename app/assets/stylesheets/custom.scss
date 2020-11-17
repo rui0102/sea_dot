@@ -2,7 +2,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-/*flash*/
+/*フラッシュ*/
 .notice {
   color: white;
   background-color: rgb(52, 140, 255);
@@ -14,30 +14,30 @@
   text-align: center;
 }
 
-/*Error message*/
+/*エラーメッセージ*/
 #error_explanation{
   color: white;
   background-color: rgb(255, 127, 42);
 }
 
-/*link*/
+/*リンク*/
 .link_color{
   text-decoration: none;
   color: black;
 }
 
-/*header*/
+/*ヘッダー*/
 
 .navbar{
   background-color:rgba(255,255,255,0.9);
 }
 
-.icon{
+.header_icon{
   font-size: 1.3em;
   color: rgb(64, 153, 255);
     }
 
-/*top*/
+/*トップ*/
 .application-top{
   .top-container{
     color: white;
@@ -46,25 +46,29 @@
   }
 }
 
-/*card*/
-
+/*画像*/
+//ユーザー詳細
 .user-icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .default_user{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.crature_card{
+//投稿一覧、ユーザー詳細
+.creatures_card{
   width: 80%;
 }
-
-.icon{
+.creatures_infos_user_icon{
+  border-radius: 50%;
+  width: 4%;
+  height: 4%;
+}
+//投稿詳細
+.creatures_info_user_icon{
   border-radius: 50%;
   width: 5%;
   height: 5%;
