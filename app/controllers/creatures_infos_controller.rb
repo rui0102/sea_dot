@@ -1,7 +1,7 @@
 class CreaturesInfosController < ApplicationController
   
   def index
-    @creatures_info = CreaturesInfo.all
+    @creatures_infos = CreaturesInfo.all
   end
 
   def new

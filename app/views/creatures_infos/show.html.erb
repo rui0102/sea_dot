@@ -1,7 +1,9 @@
 <div class="py-5 px-3">
   <div class="card">
-    <% if @creatures_info.weather? %>
+    <% if @creatures_info.picture? %>
       <%= image_tag @creatures_info.picture.url, class: "card-img" %>
+    <% else %>
+        <img class="card-img" src="/assets/default_creatures.jpg">
     <% end %>
     <div class="card-body">
       <h3 class="card-title py-2">
@@ -14,8 +16,8 @@
           <%= @creatures_info.user.name %>
         <% end %>
       </h3>
-      <h5 class="card-text py-2"><%= @creatures_info.content %></h5>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item py-2"><%= @creatures_info.content %></li>
         <li class="list-group-item py-2">・緯度 <%= @creatures_info.latitude %></li>
         <li class="list-group-item py-2">・経度 <%= @creatures_info.longitude %></li>
         <% if @creatures_info.weather? %>
