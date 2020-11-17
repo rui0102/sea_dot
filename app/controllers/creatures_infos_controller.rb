@@ -12,7 +12,7 @@ class CreaturesInfosController < ApplicationController
     @creatures_info = CreaturesInfo.find(params[:id])
   end
 
-  def create
+  def create 
     @creatures_info = CreaturesInfo.new(creatures_info_params)
     @creatures_info.user_id = current_user.id
     @creatures_info.save

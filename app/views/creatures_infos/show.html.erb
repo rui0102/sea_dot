@@ -1,6 +1,8 @@
 <div class="py-5 px-3">
   <div class="card">
-    <%= image_tag @creatures_info.picture.url, class: "card-img" %>
+    <% if @creatures_info.weather? %>
+      <%= image_tag @creatures_info.picture.url, class: "card-img" %>
+    <% end %>
     <div class="card-body">
       <h3 class="card-title py-2">
         <%= link_to user_path(@creatures_info.user), class:"link_color" do %>
