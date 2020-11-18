@@ -20,6 +20,9 @@ class CreaturesInfosController < ApplicationController
   end
   
   def destroy
+    creatures_info = CreaturesInfo.find(params[:id])
+    creatures_info.destroy
+    redirect_to creatures_infos_path
   end
 
   private

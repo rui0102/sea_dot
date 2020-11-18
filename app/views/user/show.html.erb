@@ -39,34 +39,36 @@
     <h2>投稿履歴</h2>
   </div>
   
-  <div class="card creatures_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
+  <% @user.creatures_infos.each do |creatures_info| %>
+    <div class="card creatures_card mx-auto" >
+      <div class="card-title p-2 ">
+          <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
+            <% if creatures_info.user.picture? %>
+              <%= image_tag creatures_info.user.picture.url, class: "creatures_infos_user_icon" %>
+            <% else %>
+              <%= image_tag "default_user.png", class: "creatures_infos_user_icon" %>
+            <% end %>
+            <%= creatures_info.user.name %>
+          <% end %>
       </div>
-    <% end %>
-  </div>
-  <br>
-  <div class="card creatures_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
-      </div>
-    <% end %>
-  </div>
-  <br><div class="card creatures_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
-      </div>
-    <% end %>
-  </div>
+      <%= link_to creatures_info_path(creatures_info), class: "link_color" do %>
+        <% if creatures_info.picture? %>
+          <%= image_tag creatures_info.picture.url, class: "card-img-top creature_img" %>
+        <% else %>
+          <img class="card-img-top creature_imgs" src="/assets/nophoto.png">
+        <% end %>
+        <div class="card-body">
+          <div class="card-text">
+            <%= creatures_info.content %>
+          </div>
+          <div class="text-right">
+            <%= creatures_info.created_at.to_s(:human)%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
 
   <nav aria-label="...">
     <ul class="pagination justify-content-center py-5" >
