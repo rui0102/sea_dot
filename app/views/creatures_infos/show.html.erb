@@ -3,7 +3,7 @@
     <% if @creatures_info.picture? %>
       <%= image_tag @creatures_info.picture.url, class: "card-img" %>
     <% else %>
-        <img class="card-img" src="/assets/default_creatures.jpg">
+        <img class="card-img" src="/assets/nophoto.png">
     <% end %>
     <div class="card-body">
       <h3 class="card-title py-2">

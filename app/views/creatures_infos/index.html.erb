@@ -14,9 +14,6 @@
             <% end %>
             <%= creatures_info.user.name %>
           <% end %>
-          <div class="text-right">
-            <%= creatures_info.created_at.to_s(:human)%>
-          </div>
       </div>
       <%= link_to creatures_info_path(creatures_info), class: "link_color" do %>
         <% if creatures_info.picture? %>
@@ -27,6 +24,9 @@
         <div class="card-body">
           <div class="card-text">
             <%= creatures_info.content %>
+          </div>
+          <div class="text-right">
+            <%= creatures_info.created_at.to_s(:human)%>
           </div>
         </div>
       <% end %>
