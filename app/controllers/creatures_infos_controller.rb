@@ -1,7 +1,7 @@
 class CreaturesInfosController < ApplicationController
-  
+  before_action :authenticate_user!
   def index
-    @creatures_infos = CreaturesInfo.all
+    @creatures_infos = CreaturesInfo.all.order(created_at: :desc)
   end
 
   def new
@@ -15,8 +15,11 @@ class CreaturesInfosController < ApplicationController
   def create 
     @creatures_info = CreaturesInfo.new(creatures_info_params)
     @creatures_info.user_id = current_user.id
-    @creatures_info.save
-    redirect_to creatures_info_path(@creatures_info)
+    if @creatures_info.save
+       redirect_to creatures_info_path(@creatures_info)
+    else
+      render :new
+    end
   end
   
   def destroy

@@ -18,6 +18,7 @@
 #error_explanation{
   color: white;
   background-color: rgb(255, 127, 42);
+  text-align: left;
 }
 
 /*リンク*/
@@ -44,6 +45,11 @@
     background-image: url("/assets/see.jpeg");
     background-size: cover;
   }
+}
+
+/*投稿*/
+.time_color{
+  color: rgb(105, 105, 105);
 }
 
 /*画像*/

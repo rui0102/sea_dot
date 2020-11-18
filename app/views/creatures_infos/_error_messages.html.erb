@@ -1,3 +1,20 @@
-<% @creatures_info.errors.full_messages.each do |message|%>
-  <div class="form-error"><%= message %></div>
-<%end%>
+<% if @creatures_info.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: @creatures_info.errors.count,
+                 resource: @creatures_info.class.model_name.human.downcase)
+       %>
+    </h2>
+    <ul>
+      <% @creatures_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
+
+

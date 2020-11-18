@@ -29,8 +29,13 @@ ja:
         age: 年齢
         ship_name: 船名
         self_introduction: 自己紹介文
+      creatures_info: 
+        content: メッセージ
+        latitude: 緯度
+        longitude: 経度
     models:
       user: ユーザ
+      creatures_info: 発見情報
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
