@@ -4,7 +4,7 @@
       <div class="user_imgs col-lg-2 col-md-3 col-sm-4 col-3 my-auto">
         <div class="m-2">
         <% if @user.picture? %>
-          <%= image_tag @user.picture.url, class: "user-icon card-img rounded-circle" %>
+          <%= image_tag @user.picture.thumb.url, class: "user-icon card-img rounded-circle" %>
         <% else %>
           <%= image_tag "default_user.png", class: "default_user card-img rounded-circle" %>
         <% end %>
@@ -44,7 +44,7 @@
       <div class="card-title p-2 ">
           <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
             <% if creatures_info.user.picture? %>
-              <%= image_tag creatures_info.user.picture.url, class: "creatures_infos_user_icon" %>
+              <%= image_tag creatures_info.user.picture.thumb.url, class: "creatures_infos_user_icon" %>
             <% else %>
               <%= image_tag "default_user.png", class: "creatures_infos_user_icon" %>
             <% end %>
