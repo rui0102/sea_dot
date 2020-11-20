@@ -34,12 +34,12 @@
       <% end %>
     </ul>
   </div>
-  <% if @user.creatures_infos.any? %>
+  <% if @creatures_infos.any? %>
     <div class="text-center py-5">
       <h2>投稿履歴</h2>
     </div>
   <%end %>
-  <% @user.creatures_infos.each do |creatures_info| %>
+  <% @creatures_infos.each do |creatures_info| %>
     <div class="card creatures_card mx-auto" >
       <div class="card-title p-2 ">
           <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>

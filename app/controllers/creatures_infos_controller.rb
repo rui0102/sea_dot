@@ -1,7 +1,7 @@
 class CreaturesInfosController < ApplicationController
   before_action :authenticate_user!
   def index
-    @creatures_infos = CreaturesInfo.all.page(params[:page])
+    @creatures_infos = CreaturesInfo.all.page(params[:page]).per(10)
   end
 
   def new
