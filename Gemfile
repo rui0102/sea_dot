@@ -8,12 +8,13 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
-gem 'devise'  #ログイン機能
-gem 'bootstrap', '~> 5.0.0.alpha1' #Bootstrap
+gem 'devise'  
+gem 'bootstrap', '~> 5.0.0.alpha1' 
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'kaminari'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

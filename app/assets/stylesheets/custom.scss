@@ -79,3 +79,12 @@
   width: 5%;
   height: 5%;
 }
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+.pagination {
+  justify-content: center;
+}

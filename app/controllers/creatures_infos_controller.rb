@@ -1,7 +1,7 @@
 class CreaturesInfosController < ApplicationController
   before_action :authenticate_user!
   def index
-    @creatures_infos = CreaturesInfo.all.order(created_at: :desc)
+    @creatures_infos = CreaturesInfo.all.page(params[:page])
   end
 
   def new
