@@ -16,7 +16,8 @@ class CreaturesInfosController < ApplicationController
     @creatures_info = CreaturesInfo.new(creatures_info_params)
     @creatures_info.user_id = current_user.id
     if @creatures_info.save
-       redirect_to creatures_info_path(@creatures_info)
+      flash[:notice] = '投稿しました！'
+      redirect_to creatures_info_path(@creatures_info)
     else
       render :new
     end
