@@ -1,15 +1,51 @@
 <div class="py-5 px-3">
   <div class="card">
-    <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
+    <h3 class="card-title p-2">
+        <%= link_to user_path(@creatures_info.user), class:"link_color" do %>
+          <% if @creatures_info.user.picture? %>
+            <%= image_tag @creatures_info.user.picture.thumb.url, class: "creatures_info_user_icon" %>
+          <% else %>
+            <%= image_tag "default_user.png", class: "creatures_info_user_icon" %>
+          <% end %>
+          <%= @creatures_info.user.name %>
+        <% end %>
+      </h3>
+    <% if @creatures_info.picture? %>
+      <%= image_tag @creatures_info.picture.url, class: "card-img" %>
+    <% else %>
+        <img class="card-img" src="/assets/nophoto.png">
+    <% end %>
     <div class="card-body">
-      <h3 class="card-title py-2">（画像）<%= link_to "#", class:"link_color" do %>(投稿者の名前)<% end %></h3>
-      <h5 class="card-text py-2">(イルカを発見しました！！)</h5>
-      <h5 class="card-text py-2">・緯度（42.4218649）</h5>
-      <h5 class="card-text py-2">・経度（141・6592933）</h5>
-      <h5 class="card-text py-2">・天候（晴れ） ・波高(3)m</h5>
-      <h5 class="card-text py-2">・視程 (12)マイル ・気温 (19)°</h5>
-      <h5 class="card-text py-2">・出発地 (八戸) ・目的地 (苫小牧)</h5>
-      <%= link_to "削除する", creatures_info_path, data: { confirm: "本当に削除しますか？" }, method: :delete,class:"btn btn-outline-danger btn-block rounded-pill mt-5" %></p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item py-2"><%= @creatures_info.content %></li>
+        <li class="list-group-item py-2">・緯度 <%= @creatures_info.latitude %></li>
+        <li class="list-group-item py-2">・経度 <%= @creatures_info.longitude %></li>
+        <% if @creatures_info.weather? %>
+          <li class="list-group-item py-2">・天候 <%= @creatures_info.weather %></li>
+        <% end %>
+        <% if @creatures_info.sea_lavel? %>
+          <li class="list-group-item py-2">・波高 <%= @creatures_info.sea_lavel %>m</li>
+        <% end %>
+        <% if @creatures_info.visibility?%>
+          <li class="list-group-item py-2">・視程 <%= @creatures_info.visibility %>マイル</li>
+        <% end %>
+        <% if @creatures_info.temperature?%>
+          <li class="list-group-item py-2">・気温 <%= @creatures_info.temperature %>°</li>
+        <% end%>
+        <% if @creatures_info.departure? %>
+          <li class="list-group-item py-2">・出発地 <%= @creatures_info.departure%></li>
+        <% end%>
+        <% if @creatures_info.destination? %>
+          <li class="list-group-item py-2">・目的地 <%= @creatures_info.destination %></li>
+        <% end %>
+      </ul>
+      <div class="text-right time_color">
+        <%= @creatures_info.created_at.to_s(:human)%>
+      </div>
+      <% if @creatures_info.user.id == current_user.id %>
+        <%= link_to "削除する", creatures_info_path(@creatures_info), data: { confirm: "本当に削除しますか？" }, method: :delete,class:"btn btn_spread btn-outline-danger btn-block rounded-pill mt-5" %></p>
+      <% end %>
     </div>
   </div>
 </div>
+  

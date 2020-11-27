@@ -1,17 +1,19 @@
 <div class="py-5 px-3">
   <div class="card">
     <div class="row no-gutters">
-      <div class="user_imgs text-center col-lg-2 col-md-3 col-sm-4 col-3 p-2">
+      <div class="user_imgs col-lg-2 col-md-3 col-sm-4 col-3 my-auto">
+        <div class="m-2">
         <% if @user.picture? %>
-          <%= image_tag @user.picture.url, class: "user-icon" %>
+          <%= image_tag @user.picture.thumb.url, class: "user-icon card-img rounded-circle" %>
         <% else %>
-          <%= image_tag "default_user.png", class: "default_user" %>
+          <%= image_tag "default_user.png", class: "default_user card-img rounded-circle" %>
         <% end %>
+        </div>
       </div>
       <div class="col-lg-10 col-md-9 col-sm-8 col-9">
         <div class="card-body">
           <% if @user == current_user %>
-            <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary btn-block rounded-pill" %>  
+            <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn_spread btn-outline-primary btn-block rounded-pill" %>  
           <% end %>
           <h3 class="card-title py-3"><%= @user.name %></h3>
           <% if @user.age? %>
@@ -32,57 +34,40 @@
       <% end %>
     </ul>
   </div>
-
-  <div class="text-center py-5">
-    <h2>投稿履歴</h2>
-  </div>
-  
-  <div class="card crature_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
+  <% if @creatures_infos.any? %>
+    <div class="text-center py-5">
+      <h2>投稿履歴</h2>
+    </div>
+  <%end %>
+  <% @creatures_infos.each do |creatures_info| %>
+    <div class="card creatures_card mx-auto" >
+      <div class="card-title p-2 ">
+          <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
+            <% if creatures_info.user.picture? %>
+              <%= image_tag creatures_info.user.picture.thumb.url, class: "creatures_infos_user_icon" %>
+            <% else %>
+              <%= image_tag "default_user.png", class: "creatures_infos_user_icon" %>
+            <% end %>
+            <%= creatures_info.user.name %>
+          <% end %>
       </div>
-    <% end %>
+      <%= link_to creatures_info_path(creatures_info), class: "link_color" do %>
+        <% if creatures_info.picture? %>
+          <%= image_tag creatures_info.picture.url, class: "card-img-top creature_img" %>
+        <% end %>
+        <div class="card-body">
+          <div class="card-text">
+            <%= creatures_info.content %>
+          </div>
+          <div class="text-right time_color">
+            <%= creatures_info.created_at.to_s(:human)%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
+  <div class="py-5"> 
+    <%= paginate @creatures_infos %>
   </div>
-  <br>
-  <div class="card crature_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
-      </div>
-    <% end %>
-  </div>
-  <br><div class="card crature_card mx-auto " >
-    <%= link_to "/creatures_infos/:id", class: "link_color" do %>
-      <img class="card-img-top creature_imgs" src="/assets/dolphin.jpg">
-      <div class="card-body">
-        <p class="card-title">（画像）(投稿者の名前)</p>
-        <p class="card-text">(イルカを発見しました！！)</p>
-      </div>
-    <% end %>
-  </div>
-
-  <nav aria-label="...">
-    <ul class="pagination justify-content-center py-5" >
-      <li class="page-item disabled">
-        <span class="page-link">Previous</span>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item active">
-        <span class="page-link">
-          2
-          <span class="sr-only">(current)</span>
-        </span>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
-      </li>
-    </ul>
-  </nav>
-  
 </div>

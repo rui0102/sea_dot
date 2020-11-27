@@ -2,7 +2,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-/*flash*/
 .notice {
   color: white;
   background-color: rgb(52, 140, 255);
@@ -14,30 +13,26 @@
   text-align: center;
 }
 
-/*Error message*/
 #error_explanation{
   color: white;
   background-color: rgb(255, 127, 42);
+  text-align: left;
 }
 
-/*link*/
 .link_color{
   text-decoration: none;
   color: black;
 }
 
-/*header*/
-
 .navbar{
   background-color:rgba(255,255,255,0.9);
 }
 
-.icon{
+.header_icon{
   font-size: 1.3em;
   color: rgb(64, 153, 255);
     }
 
-/*top*/
 .application-top{
   .top-container{
     color: white;
@@ -46,21 +41,39 @@
   }
 }
 
-/*card*/
-
-.user-icon {
-  border-radius: 50%;
-  // border-radius: 100px;
+.time_color{
+  color: rgb(105, 105, 105);
 }
 
+.user-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .default_user{
-  border-radius: 50%;
-  // border-radius: 100px;
-  width: 80%;
-  height: 15vw;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.crature_card{
+.creatures_card{
   width: 80%;
+}
+.creatures_infos_user_icon{
+  border-radius: 50%;
+  width: 4%;
+  height: 4%;
+}
+.creatures_info_user_icon{
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+}
+
+.pagination>li>a {          
+  border: none;   
+  color: #696969;   
+}
+.pagination {
+  justify-content: center;
 }
