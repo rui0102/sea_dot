@@ -12,8 +12,6 @@
       </h3>
     <% if @creatures_info.picture? %>
       <%= image_tag @creatures_info.picture.url, class: "card-img" %>
-    <% else %>
-        <img class="card-img" src="/assets/nophoto.png">
     <% end %>
     <div class="card-body">
       <ul class="list-group list-group-flush">
@@ -39,7 +37,8 @@
           <li class="list-group-item py-2">・目的地 <%= @creatures_info.destination %></li>
         <% end %>
       </ul>
-      <div class="text-right time_color">
+      <div id="map"></div>
+      <div class="text-right time_color mt-3">
         <%= @creatures_info.created_at.to_s(:human)%>
       </div>
       <% if @creatures_info.user.id == current_user.id %>

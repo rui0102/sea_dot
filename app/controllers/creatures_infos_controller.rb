@@ -10,6 +10,10 @@ class CreaturesInfosController < ApplicationController
 
   def show
     @creatures_info = CreaturesInfo.find(params[:id])
+    @lat = @creatures_info.latitude
+    @lng = @creatures_info.longitude
+    gon.lat = @lat
+    gon.lng = @lng
   end
 
   def create 
