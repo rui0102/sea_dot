@@ -15,6 +15,9 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
+gem "dotenv-rails"
+gem "gmaps4rails"
+gem "gon"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
