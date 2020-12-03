@@ -33,6 +33,10 @@ class CreaturesInfosController < ApplicationController
     redirect_to creatures_infos_path
   end
 
+  def map
+    gon.creatures_infos = CreaturesInfo.all
+  end
+
   private
     def creatures_info_params
       params.require(:creatures_info).permit(:content, :picture, :latitude,
