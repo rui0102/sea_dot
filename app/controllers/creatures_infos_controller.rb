@@ -34,7 +34,6 @@ class CreaturesInfosController < ApplicationController
   end
 
   def map
-    @creatures_infos = CreaturesInfo.all
     gon.creatures_infos = CreaturesInfo.all
   end
 
