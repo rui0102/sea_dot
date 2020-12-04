@@ -1,5 +1,5 @@
 <div class="py-5 px-3">
-  <div class="card">
+  <div class="card ">
     <div class="row no-gutters">
       <div class="user_imgs col-lg-2 col-md-3 col-sm-4 col-3 my-auto">
         <div class="m-2">
@@ -28,9 +28,9 @@
     </div>
     <ul class="list-group list-group-flush">
       <% if @user.self_introduction? %>
-        <li class="list-group-item p-4"><%= @user.self_introduction %></li>
+        <li class="list-group-item m-2"><%= @user.self_introduction %></li>
       <% else %>
-        <li class="list-group-item p-4">よろしくお願いします！</li>
+        <li class="list-group-item m-2">よろしくお願いします！</li>
       <% end %>
     </ul>
   </div>
@@ -41,7 +41,7 @@
   <%end %>
   <% @creatures_infos.each do |creatures_info| %>
     <div class="card creatures_card mx-auto" >
-      <div class="card-title p-2 ">
+      <div class="card-title p-2 ml-2 ">
           <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
             <% if creatures_info.user.picture? %>
               <%= image_tag creatures_info.user.picture.thumb.url, class: "creatures_infos_user_icon" %>
@@ -53,7 +53,9 @@
       </div>
       <%= link_to creatures_info_path(creatures_info), class: "link_color" do %>
         <% if creatures_info.picture? %>
-          <%= image_tag creatures_info.picture.url, class: "card-img-top creature_img" %>
+          <div class="mx-3">
+            <%= image_tag creatures_info.picture.url, class: "card-img-top creature_img" %>
+          </div>
         <% end %>
         <div class="card-body">
           <div class="card-text">
