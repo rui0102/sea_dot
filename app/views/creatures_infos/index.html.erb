@@ -3,7 +3,7 @@
     <h2>最新の発見情報</h2>
   </div>
   <% @creatures_infos.each do |creatures_info| %>
-    <div class="card creatures_card mx-auto" >
+    <div class="card">
       <div class="card-title p-2 ml-2 ">
           <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
             <% if creatures_info.user.picture? %>

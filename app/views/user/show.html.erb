@@ -12,18 +12,19 @@
       </div>
       <div class="col-lg-10 col-md-9 col-sm-8 col-9">
         <div class="card-body">
-          <% if @user == current_user %>
-            <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn_spread btn-outline-primary btn-block rounded-pill" %>  
-          <% end %>
-          <h3 class="card-title py-3"><%= @user.name %></h3>
+          <h3 class="card-title py-1"><%= @user.name %></h3>
           <% if @user.age? %>
-            <h5><%= @user.age %> 歳</h5>
+            <h5><%= @user.age %>歳</h5>
           <% end %>
-          <br>
           <% if @user.ship_name? %>
-            <h5><%= @user.ship_name %> 乗船中</h5>
+            <h5><%= @user.ship_name %>乗船中</h5>
           <% end %>
         </div>
+        <% if @user == current_user %>
+        <div class="text-right  mb-3 mr-5">
+          <%= link_to "プロフィールを編集" , edit_user_registration_path , class:"btn btn-outline-primary rounded-pill px-5" %>  
+        </div>
+        <% end %>
       </div>
     </div>
     <ul class="list-group list-group-flush">
@@ -35,12 +36,12 @@
     </ul>
   </div>
   <% if @creatures_infos.any? %>
-    <div class="text-center py-5">
+    <div class="text-center pt-5 pb-3">
       <h2>投稿履歴</h2>
     </div>
   <%end %>
   <% @creatures_infos.each do |creatures_info| %>
-    <div class="card creatures_card mx-auto" >
+    <div class="card mx-auto" >
       <div class="card-title p-2 ml-2 ">
           <%= link_to user_path(creatures_info.user.id), class: "link_color" do %>
             <% if creatures_info.user.picture? %>
