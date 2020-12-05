@@ -18,30 +18,30 @@
     <div class="card-body">
       <ul class="list-group list-group-flush">
         <li class="list-group-item py-2"><%= @creatures_info.content %></li>
-        <li class="list-group-item py-2">緯度： <%= @creatures_info.latitude %></li>
-        <li class="list-group-item py-2">経度： <%= @creatures_info.longitude %></li>
+        <li class="list-group-item small_letters py-2">緯度： <%= @creatures_info.latitude %></li>
+        <li class="list-group-item small_letters py-2">経度： <%= @creatures_info.longitude %></li>
         <% if @creatures_info.weather? %>
-          <li class="list-group-item py-2">天候： <%= @creatures_info.weather %></li>
+          <li class="list-group-item small_letters py-2">天候： <%= @creatures_info.weather %></li>
         <% end %>
         <% if @creatures_info.sea_lavel? %>
-          <li class="list-group-item py-2">波高： <%= @creatures_info.sea_lavel %>m</li>
+          <li class="list-group-item small_letters py-2">波高： <%= @creatures_info.sea_lavel %>m</li>
         <% end %>
         <% if @creatures_info.visibility?%>
-          <li class="list-group-item py-2">視程： <%= @creatures_info.visibility %>マイル</li>
+          <li class="list-group-item small_letters py-2">視程： <%= @creatures_info.visibility %>マイル</li>
         <% end %>
         <% if @creatures_info.temperature?%>
-          <li class="list-group-item py-2">気温： <%= @creatures_info.temperature %>°</li>
-        <% end%>
+          <li class="list-group-item small_letters py-2">気温： <%= @creatures_info.temperature %>°</li>
+        <% end %>
         <% if @creatures_info.departure? %>
-          <li class="list-group-item py-2">出発地： <%= @creatures_info.departure%></li>
-        <% end%>
+          <li class="list-group-item small_letters py-2">出発地： <%= @creatures_info.departure%></li>
+        <% end %>
         <% if @creatures_info.destination? %>
-          <li class="list-group-item py-2">目的地： <%= @creatures_info.destination %></li>
+          <li class="list-group-item small_letters py-2">目的地： <%= @creatures_info.destination %></li>
         <% end %>
       </ul>
       <div id="map" class="mt-4"></div>
       <div class="text-right time_color mt-3">
-        <%= @creatures_info.created_at.to_s(:human)%>
+        <small class="small_letters"><%= @creatures_info.created_at.to_s(:human) %></small>
       </div>
       <% if @creatures_info.user.id == current_user.id %>
         <div class="text-center">
@@ -51,4 +51,3 @@
     </div>
   </div>
 </div>
-  
