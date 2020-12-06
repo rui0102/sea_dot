@@ -52,17 +52,17 @@
         <%= f.password_field :current_password, autocomplete: "current-password" ,class:"form-control"  %>
       </div>
 
-      <div class="actions py-5 ">
+      <div class="actions pt-5 pb-3">
         <%= f.submit "変更する" ,class:"btn btn_spread btn-primary btn-block rounded-pill" %>
       </div>
 
       <div class="actions ">
-        <%= link_to "キャンセル", user_path(current_user) ,class:"btn btn_spread btn-outline-primary btn-block rounded-pill" %>
+        <%= link_to "キャンセル", user_path(current_user) ,class:"btn btn_spread btn-light btn-block rounded-pill" %>
       </div>
 
       <div class="py-5">
         <h3>退会する</h3>
-        <%= link_to "アカウントを削除", registration_path(resource_name), data: { confirm: "削除するとこのアカウントが利用できなくなります。よろしいですか？" }, method: :delete,class:"btn btn_spread btn-outline-danger btn-block rounded-pill" %></p>
+        <%= link_to "アカウントを削除", registration_path(resource_name), data: { confirm: "削除するとこのアカウントが利用できなくなります。よろしいですか？" }, method: :delete,class:"btn btn-outline-danger rounded-pill px-3" %></p>
       </div>
     </div>    
   </div>  
