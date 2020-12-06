@@ -3,53 +3,53 @@
   <div class="text-center mb-5 pb-5 px-3" >
     <h3 class="form-title py-5">発見情報を記載してください</h3>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :載せる写真を選択して下さい%><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :載せる写真を選択して下さい%></small><br />
       <%= f.file_field :picture %>
     </div>
     
-    <div class="field form-group text-left py-3">
-      <%= f.label :メッセージ %><i>(必須)</i><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :メッセージ %><i>(必須)</i></small><br />
       <%= f.text_area :content, autofocus: true ,class:"form-control" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :緯度 %><i>(必須)</i><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :緯度 %><i>(必須)</i></small><br />
       <%= f.text_field :latitude, autofocus: true ,class:"form-control", placeholder:"5〜9文字で入力してください。(例)35.55" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :経度 %><i>(必須)</i><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :経度 %><i>(必須)</i></small><br />
       <%= f.text_field :longitude, autofocus: true ,class:"form-control", placeholder:"6〜10文字で入力してください。(例)139.92" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :天候 %><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :天候 %></small><br />
       <%= f.text_field :weather, autofocus: true ,class:"form-control" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :波高 %><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :波高 %></small><br />
       <%= f.number_field :sea_lavel, autofocus: true ,class:"form-control" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :視程 %><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :視程 %></small><br />
       <%= f.number_field :visibility, autofocus: true ,class:"form-control",placeholder:"マイルで入力" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :気温 %><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :気温 %></small><br />
       <%= f.number_field :temperature, autofocus: true ,class:"form-control" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :出発地%><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :出発地%></small><br />
       <%= f.text_field :departure, autofocus: true ,class:"form-control" %>
     </div>
 
-    <div class="field form-group text-left py-3">
-      <%= f.label :目的地 %><br />
+    <div class="field form-group text-left py-1">
+      <small class="label_title"><%= f.label :目的地 %></small><br />
       <%= f.text_field :destination, autofocus: true ,class:"form-control" %>
     </div>
 
