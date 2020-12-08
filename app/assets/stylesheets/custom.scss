@@ -33,12 +33,23 @@
   color: rgb(64, 153, 255);
     }
 
-.application-top{
-  .top-container{
-    color: white;
-    background-image: url("/assets/see.jpeg");
-    background-size: cover;
+.top-container{
+  color: rgb(0, 140, 233);
+  background-image: url("/assets/map.png");
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  .top-text{
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
+}
+
+.top-image{
+  background-image: url("/assets/map.png");
+  background-size: cover;
+  height: 600px;
+  width: 100%;
 }
 
 .time_color{
@@ -56,9 +67,6 @@
   object-fit: cover;
 }
 
-.creatures_card{
-  width: 80%;
-}
 .creatures_infos_user_icon{
   border-radius: 50%;
   width: 4%;
@@ -86,4 +94,18 @@
 #maps {
   height: 600px;
   width: 100%;
+}
+
+.container-width{
+  max-width: 800px;
+  margin: auto;
+}
+
+.small_letters{
+  font-size: 13px;
+}
+
+.label_title{
+  color: rgb(80, 80, 80);
+  font-size: 14px;
 }
