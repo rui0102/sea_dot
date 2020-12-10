@@ -15,7 +15,7 @@ function initMap(){
     });
   }else{
     map = new google.maps.Map(document.getElementById('maps'), {
-      center: { lat: 35.6585, lng: 139.7486 }, // 東京タワーを中心に表示させている
+      center: { lat: 35.6585, lng: 139.7486 },
       zoom: 5,
     });
 
