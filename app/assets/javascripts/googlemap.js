@@ -1,6 +1,7 @@
-marker = []; 
-infoWindow = []; 
-markerData = gon.creatures_infos; 
+let map
+let marker = []; 
+let infoWindow = []; 
+let markerData = gon.creatures_infos; 
 
 function initMap(){ 
   if(document.getElementById('map')){
