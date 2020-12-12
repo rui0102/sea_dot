@@ -11,8 +11,8 @@
 // about supported directives.
 //
 
-//追記
 //= require jquery
+//= require jquery_ujs 
 //= require popper
 //= require bootstrap
 
