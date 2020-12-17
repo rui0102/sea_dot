@@ -1,6 +1,6 @@
-let marker = []; 
-let infoWindow = []; 
-let markerData = gon.creatures_infos; 
+let marker = [];   // マーカーを複数表示させたいので、配列化
+let infoWindow = [];  //吹き出しを複数表示させたいので、配列化
+const markerData = gon.creatures_infos;   // コントローラーで定義したインスタンス変数を変数に代入
 
 function initMap(){ 
   if(document.getElementById('map')){
@@ -14,11 +14,14 @@ function initMap(){
       map: map 
     });
   }else{
+    // mapの初期位置設定
     map = new google.maps.Map(document.getElementById('maps'), {
       center: { lat: 35.6585, lng: 139.7486 },
       zoom: 5,
     });
-
+    // forは繰り返し処理
+    // 変数iを0と定義し、
+    // その後gonで定義したusers分繰り返し加える処理を行う
     for (var i = 0; i < markerData.length; i++) {
       let id = markerData[i]['id']
 
