@@ -1,4 +1,4 @@
-let maps;
+let map;
 let marker = [];   // マーカーを複数表示させたいので、配列化
 let infoWindow = [];  //吹き出しを複数表示させたいので、配列化
 let markerData = gon.creatures_infos;   // コントローラーで定義したインスタンス変数を変数に代入
