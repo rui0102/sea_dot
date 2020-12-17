@@ -3,6 +3,15 @@
     <div class="ml-5">
       <h5>See Dot</h5>
     </div>
+    <%= link_to creatures_infos_path, class:"navbar-brand p-3 ml-5" do%>
+      <i class="fas fa-home header_icon"></i>
+    <% end %>
+    <%= link_to new_creatures_info_path, class:"navbar-brand p-3" do%>
+      <i class="fas fa-plus-square header_icon"></i>
+    <% end %>
+    <%= link_to user_path(current_user), class:"navbar-brand p-3 mr-5" do%>
+      <i class="fas fa-user header_icon"></i>
+    <% end %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +23,9 @@
       </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-light fixed-bottom">
+  <%
+=begin%>
+ <nav class="navbar navbar-light fixed-bottom">
     <%= link_to creatures_infos_path, class:"navbar-brand p-3 ml-5" do%>
       <i class="fas fa-home header_icon"></i>
     <% end %>
@@ -24,7 +35,9 @@
     <%= link_to user_path(current_user), class:"navbar-brand p-3 mr-5" do%>
       <i class="fas fa-user header_icon"></i>
     <% end %>
-  </nav>
+  </nav> 
+<%
+=end%>
 <% else %>
   <nav class="navbar navbar-light sticky-top text-center" >
     <div class="ml-5">
