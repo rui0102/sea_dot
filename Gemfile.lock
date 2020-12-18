@@ -49,7 +49,7 @@ GEM
     bindex (0.8.1)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootstrap (5.0.0.alpha1)
+    bootstrap (5.0.0.alpha3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -256,7 +256,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bootstrap (~> 5.0.0.alpha1)
+  bootstrap (~> 5.0.0.alpha3)
   byebug (= 9.0.6)
   carrierwave
   coffee-rails (= 4.2.2)
