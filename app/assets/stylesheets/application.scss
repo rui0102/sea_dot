@@ -24,14 +24,11 @@
   background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.btn_spread{
-  padding: 15px;
+.btn{
+  border-radius: 30px;
 }
-.btn_account{
-  padding: 5px 90px;
-}
-.btn_login{
-  padding: 5px 115px;
+.btn_width{
+  width: 200px;
 }
 
 .card{
