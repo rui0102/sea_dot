@@ -4,17 +4,17 @@
     <div class="mb-5 pb-5 px-3">
       <h3 class="form-title py-5">アカウント作成</h3>
 
-      <div class="field form-group text-left py-3">
+      <div class="field form-group text-left">
         <small class="label_title"><%= f.label :名前 %></small><br />
         <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class:"form-control" %>
       </div>
 
-      <div class="field form-group text-left py-3">
+      <div class="field form-group text-left">
         <small class="label_title"><%= f.label :Eメール %></small><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"form-control" %>      
       </div>
 
-      <div class="field form-group text-left py-3">
+      <div class="field form-group text-left">
         <small class="label_title"><%= f.label :パスワード %></small>
         <% if @minimum_password_length %>
         <em class="label_title">(<%= @minimum_password_length %> 文字以上で入力してください)</em>
@@ -22,7 +22,7 @@
         <%= f.password_field :password, autocomplete: "new-password" ,class:"form-control" %>
       </div>
 
-      <div class="field form-group text-left py-3">
+      <div class="field form-group text-left">
         <small class="label_title"><%= f.label :確認用パスワード %></small><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class:"form-control" %>
       </div>
