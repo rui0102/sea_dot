@@ -45,7 +45,7 @@
       </div>
       <% if @creatures_info.user.id == current_user.id %>
         <div class="text-center">
-          <%= link_to "削除する", creatures_info_path(@creatures_info), data: { confirm: "本当に削除しますか？" }, method: :delete,class:"btn btn-outline-danger rounded-pill px-5 mt-5" %></p>
+          <%= link_to "削除する", creatures_info_path(@creatures_info), data: { confirm: "本当に削除しますか？" }, method: :delete,class:"btn btn-outline-danger mt-5" %></p>
         </div>
       <% end %>
     </div>
