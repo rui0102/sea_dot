@@ -1,5 +1,7 @@
 class CreaturesInfosController < ApplicationController
   before_action :authenticate_user!
+  before_action :correct_user, only: :destroy
+
   def index
     @creatures_infos = CreaturesInfo.all.page(params[:page]).per(10)
   end
@@ -28,8 +30,8 @@ class CreaturesInfosController < ApplicationController
   end
   
   def destroy
-    creatures_info = CreaturesInfo.find(params[:id])
-    creatures_info.destroy
+    @correct_creatures_info.destroy
+    flash[:notice] = '投稿を削除しました！'
     redirect_to creatures_infos_path
   end
 
@@ -42,6 +44,10 @@ class CreaturesInfosController < ApplicationController
       params.require(:creatures_info).permit(:content, :picture, :latitude,
              :longitude, :weather, :sea_lavel, :visibility, :temperature, 
              :departure, :destination)
+    end
+    def correct_user
+      @correct_creatures_info = current_user.creatures_infos.find_by(id: params[:id])
+      redirect_to root_url if @correct_creatures_info.nil?
     end
   
   
