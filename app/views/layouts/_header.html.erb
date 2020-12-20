@@ -18,7 +18,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav">
         <li class="nav-item"><%= link_to "map",  creatures_infos_map_path, class:"nav-link" %></li>
-        <li class="nav-item"><%= link_to "トップページ",  root_path, class:"nav-link" %></li>
         <li class="nav-item"><%= link_to "ログイアウト", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
         <li class="nav-item"><%= link_to "退会する", user_registration_path, data: { confirm: "退会するとこのアカウントが利用できなくなります。よろしいですか？" }, method: :delete, class:"nav-link" %></li>
       </ul>
