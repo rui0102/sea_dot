@@ -59,11 +59,7 @@
       <div class="actions">
         <%= link_to "キャンセル", user_path(current_user) ,class:"btn btn_width btn-light" %>
       </div>
-
-      <div class="py-5">
-        <h3>退会する</h3>
-        <%= link_to "アカウントを削除", registration_path(resource_name), data: { confirm: "削除するとこのアカウントが利用できなくなります。よろしいですか？" }, method: :delete,class:"btn btn-outline-danger" %>
-      </div>
+      
     </div>    
   </div>  
 <% end %>
