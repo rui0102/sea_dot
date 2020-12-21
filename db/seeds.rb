@@ -78,7 +78,7 @@ CreaturesInfo.create!(
       user_id: 1,
       content: '漁船群がいます！！注意して航行します。',
       picture: File.open('./app/assets/images/漁船群.png'),
-      latitude: '40.50',
+      latitude: '40.51',
       longitude: '141.38',
       weather: '晴れ',
       sea_lavel: '1',
