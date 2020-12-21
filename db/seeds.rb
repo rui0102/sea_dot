@@ -7,3 +7,47 @@ User.create!(
   email: 'test1@gmail.com',
   password: 'password'
 )
+
+CreateCreaturesInfo.create!(
+  [
+    {
+      user_id: 1,
+      content: 'イルカがいました！',
+      picture: File.open('./app/assets/images/イルカ.jpg'),
+      latitude: '41.56',
+      longitude: '143.02',
+      weather: '晴れ',
+      sea_lavel: '2',
+      visibility: '9',
+      temperature: '9',
+      departure: '八戸',
+      destination: '苫小牧'
+    },
+    {
+      user_id: 1,
+      content: '東京湾にエイがいます！！',
+      latitude: '35.38',
+      longitude: '139.78',
+      weather: '曇り',
+      sea_lavel: '1',
+      visibility: '8',
+      temperature: '20',
+      departure: '晴海埠頭',
+      destination: '名古屋港'
+    },
+  ]
+)
+
+# {
+#   user_id: 1,
+#   content: '',
+#   picture: File.open('./app/assets/images/'),
+#   latitude: '',
+#   longitude: '',
+#   weather: '',
+#   sea_lavel: '',
+#   visibility: '',
+#   temperature: '',
+#   departure: '',
+#   destination: ''
+# },
