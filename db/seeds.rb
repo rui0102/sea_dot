@@ -8,7 +8,7 @@ User.create!(
   password: 'password'
 )
 
-CreateCreaturesInfo.create!(
+CreaturesInfo.create!(
   [
     {
       user_id: 1,
