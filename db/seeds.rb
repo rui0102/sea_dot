@@ -1,15 +1,8 @@
-# user作成
-5.times do |n|
-  User.create!(
-    email: "ruiiii180#{n + 1}@test.com",
-    name: "テストユーザー#{n + 1}",
-    password: "password"
-  )
-end
-
-#creatures_info作成
-5.times do |n|
-  CreaturesInfo.create!(
-    
-  )
-end
+User.create!(
+      #picture:''
+      age: '24',
+      self_introduction: 'シルバーフェリーで三等航海士を努めています。',
+      ship_name: 'シルバープリンセス',
+      email: 'test1@gmail.com',
+      encrypted_password: 'password'
+)
