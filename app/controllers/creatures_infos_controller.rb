@@ -42,8 +42,8 @@ class CreaturesInfosController < ApplicationController
   private
     def creatures_info_params
       params.require(:creatures_info).permit(:content, :picture, :latitude,
-             :longitude, :weather, :sea_lavel, :visibility, :temperature, 
-             :departure, :destination)
+                                             :longitude, :weather, :sea_lavel, :visibility, :temperature, 
+                                             :departure, :destination)
     end
     def correct_user
       @correct_creatures_info = current_user.creatures_infos.find_by(id: params[:id])
