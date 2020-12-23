@@ -15,6 +15,7 @@
       </div>
     </div>
     <%= link_to "アカウント作成",  new_user_registration_path, class: "btn btn_width btn-primary mt-5 mb-4"%><br>
-    <%= link_to "ログイン", new_user_session_path, class: "btn btn_width btn-success mb-5" %>
+    <%= link_to "ログイン", new_user_session_path, class: "btn btn_width btn-success mr-5" %>
+    <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: "btn btn_width btn-secondary" %>
   </div>
 </div>
