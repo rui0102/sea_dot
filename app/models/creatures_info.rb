@@ -1,7 +1,7 @@
 class CreaturesInfo < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
-  mount_uploader :picture, PictureUploader 
+  mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validates :latitude, presence: true, length: { in: 5..9 }
@@ -13,5 +13,3 @@ class CreaturesInfo < ApplicationRecord
   validates :departure, length: { maximum: 15 }
   validates :destination, length: { maximum: 15 }
 end
-
-

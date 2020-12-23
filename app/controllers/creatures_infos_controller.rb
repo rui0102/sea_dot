@@ -18,7 +18,7 @@ class CreaturesInfosController < ApplicationController
     gon.lng = @lng
   end
 
-  def create 
+  def create
     @creatures_info = CreaturesInfo.new(creatures_info_params)
     @creatures_info.user_id = current_user.id
     if @creatures_info.save
@@ -28,7 +28,7 @@ class CreaturesInfosController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     @correct_creatures_info.destroy
     flash[:notice] = '投稿を削除しました！'
@@ -40,15 +40,15 @@ class CreaturesInfosController < ApplicationController
   end
 
   private
-    def creatures_info_params
-      params.require(:creatures_info).permit(:content, :picture, :latitude,
-                                             :longitude, :weather, :sea_lavel, :visibility, :temperature, 
-                                             :departure, :destination)
-    end
-    def correct_user
-      @correct_creatures_info = current_user.creatures_infos.find_by(id: params[:id])
-      redirect_to root_url if @correct_creatures_info.nil?
-    end
-  
-  
+
+  def creatures_info_params
+    params.require(:creatures_info).permit(:content, :picture, :latitude,
+                                           :longitude, :weather, :sea_lavel, :visibility, :temperature,
+                                           :departure, :destination)
+  end
+
+  def correct_user
+    @correct_creatures_info = current_user.creatures_infos.find_by(id: params[:id])
+    redirect_to root_url if @correct_creatures_info.nil?
+  end
 end

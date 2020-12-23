@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 gem 'bootstrap', '~> 4.1.1'
 gem 'carrierwave'
 gem 'coffee-rails', '4.2.2'
-gem 'devise'  
+gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
-gem "dotenv-rails"
+gem 'dotenv-rails'
 gem 'font-awesome-sass'
-gem "gmaps4rails"
-gem "gon"
+gem 'gmaps4rails'
+gem 'gon'
 gem 'jbuilder',     '2.7.0'
 gem 'jquery-rails', '4.3.1'
 gem 'kaminari'
@@ -27,8 +27,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors'           #エラーメッセージ表示変更
-  gem 'binding_of_caller'       #>>
+  gem 'better_errors'           # エラーメッセージ表示変更
+  gem 'binding_of_caller'       # >>
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
