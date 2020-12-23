@@ -1,4 +1,4 @@
-Time::DATE_FORMATS[:human] = lambda {|date|
+Time::DATE_FORMATS[:human] = lambda { |date|
   seconds = (Time.now - date).round;
   # days    = seconds / (60 * 60 * 24); return "#{date.month}月#{date.day}日" if days > 0;
   days    = seconds / (60 * 60 * 24); return "#{days}日前" if days > 0;

@@ -5,10 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   mount_uploader :picture, PictureUploader 
-  validates :name, presence: true, length:{maximum: 30}
-  validates :age, length:{maximum: 3}
-  validates :ship_name, length:{maximum: 30}
-  validates :self_introduction, length:{maximum: 100}
+  validates :name, presence: true, length:{ maximum: 30 }
+  validates :age, length:{ maximum: 3 }
+  validates :ship_name, length:{ maximum: 30 }
+  validates :self_introduction, length:{ maximum: 100 }
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
