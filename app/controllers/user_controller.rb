@@ -4,5 +4,4 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @creatures_infos = @user.creatures_infos.page(params[:page]).per(10)
   end
-
 end

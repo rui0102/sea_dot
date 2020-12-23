@@ -6,7 +6,7 @@ unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
     config.storage :fog
     config.fog_provider = 'fog/aws'
-    config.fog_directory  = 'rails-sea-dot'
+    config.fog_directory = 'rails-sea-dot'
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
@@ -14,6 +14,5 @@ unless Rails.env.development? || Rails.env.test?
       region: ENV['AWS_DEFAULT_REGION'],
       path_style: true
     }
-
   end
 end
