@@ -1,11 +1,20 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  before_action :check_guest, only: %i[update destroy]
+
+  def check_guest
+    if resource.email == 'guest@example.com'
+      redirect_to user_path(current_user), alert: 'ゲストユーザーの変更・削除できません。'
+    end
+  end
+
   protected
 
     def after_update_path_for(resource)
       user_path(current_user)
     end
+    
     def after_sign_in_path_for(resource)
       creatures_infos_path
     end

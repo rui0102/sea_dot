@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
+
   resources :user, only: [:show]
 
   get '/creatures_infos/map', to:'creatures_infos#map'

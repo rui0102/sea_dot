@@ -10,4 +10,11 @@ class User < ApplicationRecord
   validates :ship_name, length:{maximum: 30}
   validates :self_introduction, length:{maximum: 100}
 
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.name = "ゲストユーザー"
+    end
+  end
+
 end
