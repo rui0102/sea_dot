@@ -12,19 +12,5 @@ AllCops:
     # Rails向けのRails copsを実行。"rubocop -R"と同じ
   Rails:
     enabled: true
-
-  # "Missing top-level class documentation comment."を無効
-  Style/Documentation:
-    Enabled: false
-  
-  # コメントにはアスキー記号のみを使用してください
-  AsciiComments:
-    Enabled: false
-
-  # "Prefer single-quoted strings when you don't need string interpolation or special symbols."を無効
-  Style/StringLiterals:
-    Enabled: false
-
-  # "Line is too long"を無効
-  Metrics/LineLength:
-    Enabled: false
+    
+  SuggestExtensions: false
