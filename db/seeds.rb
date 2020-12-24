@@ -12,7 +12,7 @@ CreaturesInfo.create!(
   [
     {
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -25,7 +25,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -37,7 +37,7 @@ CreaturesInfo.create!(
       destination: '苫小牧'
     },{
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -49,7 +49,7 @@ CreaturesInfo.create!(
       destination: '苫小牧'
     },{
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -61,7 +61,7 @@ CreaturesInfo.create!(
       destination: '苫小牧'
     },{
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -73,7 +73,7 @@ CreaturesInfo.create!(
       destination: '苫小牧'
     },{
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -85,7 +85,7 @@ CreaturesInfo.create!(
       destination: '苫小牧'
     },{
       user_id: 1,
-      content: 'イルカがいました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカ.jpg'),
       latitude: '41.56',
       longitude: '143.02',
@@ -98,7 +98,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '初めてホエールウォッチングを見る事ができました！',
+      content: '鯨の発見情報です！',
       picture: File.open('./app/assets/images/鯨.jpg'),
       latitude: '32.73',
       longitude: '133.94',
@@ -111,7 +111,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '東京湾にエイがいます！！',
+      content: 'エイの発見情報です！',
       latitude: '35.38',
       longitude: '139.78',
       weather: '曇り',
@@ -123,7 +123,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '苫小牧沖にイルカの群れがいます！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカの群れ.jpg'),
       latitude: '42.08',
       longitude: '141.67',
@@ -136,7 +136,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '鯨がいます！！',
+      content: '鯨の発見情報です！',
       picture: File.open('./app/assets/images/クジラ.jpeg'),
       latitude: '32.35',
       longitude: '132.94',
@@ -149,7 +149,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '漁船群がいます！！注意して航行します。',
+      content: '漁船群の発見情報です！',
       picture: File.open('./app/assets/images/漁船群.png'),
       latitude: '40.51',
       longitude: '141.38',
@@ -162,7 +162,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: 'サメがいました！',
+      content: 'サメの発見情報です！',
       picture: File.open('./app/assets/images/さめ.jpg'),
       latitude: '34.09',
       longitude: '138.55',
@@ -175,7 +175,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '波が穏やかでイルカがよく見えました！',
+      content: 'イルカの発見情報です！',
       picture: File.open('./app/assets/images/イルカの群れ2.jpg'),
       latitude: '42.14',
       longitude: '142.33',
@@ -188,7 +188,7 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '鯨がいました！四国の下によくいますね',
+      content: '鯨の発見情報です！',
       picture: File.open('./app/assets/images/鯨2.jpg'),
       latitude: '32.79',
       longitude: '134.34',
