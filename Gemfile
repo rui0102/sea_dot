@@ -27,8 +27,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors'           # エラーメッセージ表示変更
-  gem 'binding_of_caller'       # >>
+  gem 'better_errors'        
+  gem 'binding_of_caller'       
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
