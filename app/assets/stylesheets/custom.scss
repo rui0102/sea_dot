@@ -19,19 +19,14 @@
   text-align: left;
 }
 
-.link_color{
-  text-decoration: none;
-  color: black;
+.sticky-top{
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+  background-color:rgba(255,255,255,1);
+  .header_icon{
+    font-size: 1.3em;
+    color: rgb(64, 153, 255);
+  }
 }
-
-.navbar{
-  background-color:rgba(255,255,255,0.9);
-}
-
-.header_icon{
-  font-size: 1.3em;
-  color: rgb(64, 153, 255);
-    }
 
 .top-container{
   color: rgb(0, 140, 233);
@@ -100,5 +95,13 @@
 
 .label_title{
   color: rgb(80, 80, 80);
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.link_color{
+  color: rgba(0, 0, 0, 0.856);
+  &:hover{
+    color: black;
+    text-decoration-color: rgba(0, 0, 0, 0.507);
+  }
 }

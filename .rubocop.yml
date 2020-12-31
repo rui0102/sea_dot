@@ -1,0 +1,16 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  # 除外するディレクトリを設定。例えばschemaやmigrationファイルなどは書き直すことが少ないため、検知対象外に
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'lib/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    # Rails向けのRails copsを実行。"rubocop -R"と同じ
+  Rails:
+    enabled: true
+    
+  SuggestExtensions: false

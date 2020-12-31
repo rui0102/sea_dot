@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  #get 'home/top'
+  # get 'home/top'
   root 'home#top'
 
   devise_for :users, controllers: {
-    registrations: 'users/registrations', 
+    registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
 
@@ -13,8 +13,7 @@ Rails.application.routes.draw do
 
   resources :user, only: [:show]
 
-  get '/creatures_infos/map', to:'creatures_infos#map'
+  get '/creatures_infos/map', to: 'creatures_infos#map'
 
-  resources :creatures_infos, only: [:index, :show, :new, :create, :destroy ]
-
+  resources :creatures_infos, only: %i[index show new create destroy]
 end
