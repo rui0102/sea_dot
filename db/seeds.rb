@@ -136,19 +136,6 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-      content: '鯨がいます！！',
-      picture: File.open('./app/assets/images/クジラ.jpeg'),
-      latitude: '32.35',
-      longitude: '132.94',
-      weather: '晴れ',
-      sea_lavel: '2',
-      visibility: '9',
-      temperature: '9',
-      departure: '小松島',
-      destination: '細島'
-    },
-    {
-      user_id: 1,
       content: '漁船群がいます！！注意して航行します。',
       picture: File.open('./app/assets/images/漁船群.png'),
       latitude: '40.51',
