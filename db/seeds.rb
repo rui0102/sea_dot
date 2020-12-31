@@ -136,36 +136,6 @@ CreaturesInfo.create!(
     },
     {
       user_id: 1,
-<<<<<<< HEAD
-      content: '漁船群がいます！！注意して航行します。',
-=======
-      content: '鯨の発見情報です！',
-      picture: File.open('./app/assets/images/クジラ.jpeg'),
-      latitude: '32.35',
-      longitude: '132.94',
-      weather: '晴れ',
-      sea_lavel: '2',
-      visibility: '9',
-      temperature: '9',
-      departure: '小松島',
-      destination: '細島'
-    },
-    {
-      user_id: 1,
-      content: '漁船群の発見情報です！',
->>>>>>> dc1ddc381d27b1de1174baf79ecab6bb855abd13
-      picture: File.open('./app/assets/images/漁船群.png'),
-      latitude: '40.51',
-      longitude: '141.38',
-      weather: '晴れ',
-      sea_lavel: '1',
-      visibility: '10',
-      temperature: '9',
-      departure: '八戸',
-      destination: '苫小牧'
-    },
-    {
-      user_id: 1,
       content: 'サメの発見情報です！',
       picture: File.open('./app/assets/images/さめ.jpg'),
       latitude: '34.09',
