@@ -21,7 +21,7 @@
 
       <div class="field form-group text-left">
         <small class="label_title"><%= f.label :年齢 %></small><br />
-        <%= f.number_field :age, autofocus: true, autocomplete: "age" ,class:"form-control" %>      
+        <%= f.number_field :age, min: 0, autofocus: true, autocomplete: "age" ,class:"form-control" %>      
       </div>
 
       <div class="field form-group text-left">
