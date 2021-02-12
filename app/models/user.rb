@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :picture, PictureUploader
   validates :name, presence: true, length: { maximum: 30 }
-  validates :age, length: { maximum: 3 }
+  validates :age, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 128}  
   validates :ship_name, length: { maximum: 30 }
   validates :self_introduction, length: { maximum: 100 }
 
